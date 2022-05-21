@@ -1,0 +1,35 @@
+.header {
+  padding: 15px 0 0;
+  background: $bg-black;
+
+  &-contain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include media("<md") {
+      flex-direction: column;
+    }
+  }
+
+  .actions {
+    margin-left: 25px;
+
+    @include media("<md") {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+
+  .navbar-toggler {
+    margin-bottom: 10px;
+    color: $white;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border: none;
+    }
+  }
+}

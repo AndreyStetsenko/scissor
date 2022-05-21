@@ -1,0 +1,87 @@
+@mixin fontWalsh($name, $nameWeight, $weight) {
+  @font-face {
+      font-family: #{$name};
+      src: url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.ttf") format("TrueType"),
+          url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.woff") format("woff"),
+          url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.eot") format("eot");
+      font-weight: $weight;
+      font-display: fallback;
+  }
+}
+
+$FrankStd: 'ITCFranklinGothicStd';
+
+@include fontWalsh($FrankStd, 'DmCd', 700);
+
+.article-level {
+  &-1 {
+    font-size: 38px;
+    line-height: 45px;
+    font-weight: 400;
+    color: $black;
+    // font-family: $FrankStd;
+
+    @include media ("<md") {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &-2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    color: $black;
+    // font-family: $fontAudrey;
+    text-transform: uppercase;
+
+    @include media ("<md") {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &-3 {
+    font-size: 30px;
+    line-height: 37.65px;
+    font-weight: 200;
+    color: $black;
+    // font-family: $fontMulish;
+    text-transform: uppercase;
+
+    @include media ("<md") {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &-4 {
+    font-size: 25px;
+    line-height: 31.38px;
+    font-weight: 300;
+    color: $black;
+    // font-family: $fontMulish;
+
+    @include media ("<md") {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.text {
+  &-main {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $black;
+    // font-family: $fontMulish;
+  }
+
+  &-addit {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    // font-family: $fontMulish;
+  }
+}
