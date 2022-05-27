@@ -1,7 +1,8 @@
 @mixin fontWalsh($name, $nameWeight, $weight) {
   @font-face {
       font-family: #{$name};
-      src: url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.ttf") format("TrueType"),
+      src: url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.otf") format("TrueType"),
+      url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.ttf") format("TrueType"),
           url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.woff") format("woff"),
           url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.eot") format("eot");
       font-weight: $weight;
@@ -10,8 +11,16 @@
 }
 
 $FrankStd: 'ITCFranklinGothicStd';
+$EastmanGrotesque: 'Eastman-Grotesque';
 
 @include fontWalsh($FrankStd, 'DmCd', 700);
+
+@include fontWalsh($EastmanGrotesque, 'Bold-trial', 800);
+@include fontWalsh($EastmanGrotesque, 'Demi-Bold-trial', 700);
+@include fontWalsh($EastmanGrotesque, 'Medium-trial', 600);
+@include fontWalsh($EastmanGrotesque, 'Regular-trial', 500);
+@include fontWalsh($EastmanGrotesque, 'Regular-Offset-trial', 400);
+@include fontWalsh($EastmanGrotesque, 'Light-trial', 300);
 
 .article-level {
   &-1 {
@@ -19,7 +28,7 @@ $FrankStd: 'ITCFranklinGothicStd';
     line-height: 45px;
     font-weight: 400;
     color: $black;
-    // font-family: $FrankStd;
+    font-family: $EastmanGrotesque;
 
     @include media ("<md") {
       font-size: 30px;

@@ -1,0 +1,17 @@
+.promo-banner {
+  padding: 6px 0;
+  background: $black;
+
+  &--cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
