@@ -1,4 +1,5 @@
 import header from '../../modules/header';
+import sliderProductPhoto from './modules/sliderProductPhoto';
 
 /**
  * Static page
@@ -15,6 +16,7 @@ class Static {
      */
     initModules() {
         header();
+        sliderProductPhoto();
     }
 }
 

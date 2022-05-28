@@ -1,3 +1,5 @@
+import '@popperjs/core';
+import 'bootstrap';
 import helpers from './modules/helpers';
 import VideoBanner from './modules/videoBanner';
 import lazyload from './modules/lazyload';

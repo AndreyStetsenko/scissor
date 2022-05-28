@@ -11,12 +11,14 @@ const devMode = process.env.NODE_ENV !== 'production';
 const location = {
     build: './assets/javascript/build',
     home: './assets/javascript/src/pages/home',
+    product: './assets/javascript/src/pages/product',
 
     style: './assets/javascript/src/pages/style'
 };
 
 const output = {
     home: location.home,
+    product: location.product,
 
     style: location.style
 };

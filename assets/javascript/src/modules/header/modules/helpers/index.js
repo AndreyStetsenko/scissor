@@ -14,4 +14,20 @@ export default function helpers() {
             $(this).html(`<span>${$(this).html()}</span><span class="icon"></span>`);
         }
     });
+
+    $('.p-inp-num').each(function() {
+        const num = $(this);
+
+        num.find('.plus').on('click', () => {
+            num.parent().find('input').val(+num.parent().find('input').val() + 1);
+        });
+
+        num.find('.minus').on('click', () => {
+            num.parent().find('input').val(+num.parent().find('input').val() - 1);
+
+            if (+num.parent().find('input').val() < 1) {
+                num.parent().find('input').val(1);
+            }
+        });
+    });
 }

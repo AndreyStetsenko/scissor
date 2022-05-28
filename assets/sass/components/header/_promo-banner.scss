@@ -3,6 +3,7 @@
   background: $black;
 
   &--cont {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,5 +14,17 @@
       font-weight: 700;
       text-transform: uppercase;
     }
+  }
+
+  .close {
+    width: 14px;
+    height: 14px;
+    display: block;
+    color: $white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto 0;
   }
 }
